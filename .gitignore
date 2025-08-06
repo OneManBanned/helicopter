@@ -1,3 +1,5 @@
+.grokignore
+context.txt
 todo.txt
 
 # Logs
