@@ -1,6 +1,7 @@
-// build.js
-const esbuild = require('esbuild');
-const { livereloadPlugin } = require('@jgoz/esbuild-plugin-livereload');
+import esbuild from 'esbuild';
+import pkg from '@jgoz/esbuild-plugin-livereload';
+
+const {livereloadPlugin} = pkg;
 
 async function start() {
   const ctx = await esbuild.context({

@@ -1,3 +1,14 @@
+(() => {
+  if (typeof window === 'undefined') return;
+  if (window.__ESBUILD_LR_PLUGIN__) return;
+  window.__ESBUILD_LR_PLUGIN__ = 'http://127.0.0.1:53099/';
+  const script = document.createElement('script');
+  script.setAttribute('src', 'http://127.0.0.1:53099/livereload-event-source.js');
+  script.setAttribute('type', 'module');
+  document.head.appendChild(script);
+})();
+
+
 // src/game.ts
 var Game = class {
   constructor(canvas2, ctx2) {
@@ -26,3 +37,4 @@ var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 var game = new Game(canvas, ctx);
 game.start();
+//# sourceMappingURL=bundle.js.map
